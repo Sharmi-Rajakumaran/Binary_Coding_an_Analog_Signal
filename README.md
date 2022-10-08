@@ -138,4 +138,4 @@ DIGITAL SIGNAL
 REFERENCES
 
 [1]	G Akash Ambekar, “Implementation of High Speed 3- bit Flash type Analog to Digital converter(ADC),” Issue 1, Version 1, 2022
-[2]	Sumanyu Singh, “Design of 3 bit Flash Type ADC”, https://github.com/Sumanyu-Singh/Mixed-Signal-Design-of-3-bit-flash-Type-ADC
+[2]     Sumanyu Singh, “Design of 3 bit Flash Type ADC”, https://github.com/Sumanyu-Singh/Mixed-Signal-Design-of-3-bit-flash-Type-ADC
