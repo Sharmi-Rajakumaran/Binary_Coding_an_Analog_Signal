@@ -1,0 +1,26 @@
+* /home/sharmir08/Desktop/Digital_modulation/SKY130_Sharmi_S_H_ckt/SKY130_Sharmi_S_H_ckt.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: Sat 08 Oct 2022 08:03:33 PM IST
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+X2  V++ V-- Sampled_output Capacitor Sampled_output Gnd avsd_opamp		
+v3  Analog_Input Gnd sine		
+v4  Sampling_Frequency Gnd pulse		
+v1  V++ Gnd DC		
+v2  V-- Gnd DC		
+SC1  Net-_SC1-Pad1_ Sampling_Frequency Capacitor Gnd sky130_fd_pr__nfet_01v8_lvt		
+U1  Analog_Input plot_v1		
+scmode1  SKY130mode		
+U4  Sampling_Frequency plot_v1		
+U7  Sampled_output plot_v1		
+SC7  Net-_SC1-Pad1_ Net-_SC5-Pad1_ Capacitor V++ sky130_fd_pr__pfet_01v8_hvt		
+SC6  Net-_SC5-Pad1_ Sampling_Frequency Gnd Gnd sky130_fd_pr__nfet_01v8_lvt		
+SC5  Net-_SC5-Pad1_ Sampling_Frequency V++ V++ sky130_fd_pr__pfet_01v8_hvt		
+U2  Capacitor plot_v1		
+SC2  Capacitor Gnd sky130_fd_pr__cap_mim_m3_1		
+X1  V++ V-- Net-_SC1-Pad1_ Analog_Input Net-_SC1-Pad1_ Gnd avsd_opamp		
+
+.end

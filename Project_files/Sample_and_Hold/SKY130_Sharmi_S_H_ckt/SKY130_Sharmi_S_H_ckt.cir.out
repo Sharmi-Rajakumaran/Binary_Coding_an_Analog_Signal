@@ -1,0 +1,39 @@
+* /home/sharmir08/desktop/digital_modulation/sky130_sharmi_s_h_ckt/sky130_sharmi_s_h_ckt.cir
+
+.include avsd_opamp.sub
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__diode_pw2nd_11v0.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__linear.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__pnp.model.spice"
+.lib "/usr/share/local/sky130_fd_pr/models/sky130.lib.spice" tt
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__inductors.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__r+c.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
+x2 v++ v-- sampled_output capacitor sampled_output gnd avsd_opamp
+v3  analog_input gnd sine(0 2m 5 0 0)
+v4  sampling_frequency gnd pulse(0 2m 0.1u 0.1u 0.1u 2m 4m)
+v1 v++ gnd  dc 2
+v2 v-- gnd  dc -2
+xsc1 net-_sc1-pad1_ sampling_frequency capacitor gnd sky130_fd_pr__nfet_01v8_lvt 
+* u1  analog_input plot_v1
+* s c m o d e
+* u4  sampling_frequency plot_v1
+* u7  sampled_output plot_v1
+xsc7 net-_sc1-pad1_ net-_sc5-pad1_ capacitor v++ sky130_fd_pr__pfet_01v8_hvt 
+xsc6 net-_sc5-pad1_ sampling_frequency gnd gnd sky130_fd_pr__nfet_01v8_lvt 
+xsc5 net-_sc5-pad1_ sampling_frequency v++ v++ sky130_fd_pr__pfet_01v8_hvt 
+* u2  capacitor plot_v1
+xsc2 capacitor gnd sky130_fd_pr__cap_mim_m3_1 
+x1 v++ v-- net-_sc1-pad1_ analog_input net-_sc1-pad1_ gnd avsd_opamp
+.tran 0.5e-03 200e-03 0e-03
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(analog_input)
+plot v(sampling_frequency)
+plot v(sampled_output)
+plot v(capacitor)
+.endc
+.end
