@@ -1,0 +1,17 @@
+* Subcircuit SKY130_Sharmi_S_H
+.subckt SKY130_Sharmi_S_H analog_input sampling_frequency sampled_output 
+* /home/sharmir08/esim-2.3/library/subcircuitlibrary/sky130_sharmi_s_h/sky130_sharmi_s_h.cir
+.include avsd_opamp.sub
+x1 v++ v-- analog_input net-_sc1-pad1_ net-_sc1-pad1_ gnd avsd_opamp
+x2 v++ v-- capacitor sampled_output sampled_output gnd avsd_opamp
+v1 v++ gnd  dc 10
+v2 v-- gnd  dc 10
+xsc1 net-_sc1-pad1_ sampling_frequency capacitor capacitor sky130_fd_pr__nfet_01v8_lvt
+xsc2 capacitor gnd sky130_fd_pr__cap_mim_m3_1
+* u1  analog_input plot_v1
+* u5  sampled_output plot_v1
+* u4  capacitor plot_v1
+* u3  sampling_frequency plot_v1
+* Control Statements
+
+.ends SKY130_Sharmi_S_H

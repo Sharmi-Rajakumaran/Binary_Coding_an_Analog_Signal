@@ -1,0 +1,17 @@
+* /home/sharmir08/eSim-2.3/library/SubcircuitLibrary/SKY130_Sharmi_S_H/SKY130_Sharmi_S_H.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: Fri 07 Oct 2022 05:01:18 PM IST
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+X1  V++ V-- Net-_U2-Pad1_ Net-_SC2-Pad1_ Net-_SC2-Pad1_ Gnd avsd_opamp		
+v1  V++ Gnd DC		
+v2  V-- Gnd DC		
+SC2  Net-_SC2-Pad1_ Gnd sky130_fd_pr__cap_mim_m3_1		
+U4  Net-_SC2-Pad1_ plot_v1		
+U2  Net-_U2-Pad1_ Net-_SC2-Pad1_ Net-_U2-Pad3_ PORT		
+X2  V++ V-- Net-_SC2-Pad1_ Net-_U2-Pad3_ Net-_U2-Pad3_ Gnd avsd_opamp		
+
+.end

@@ -1,0 +1,67 @@
+* /home/sharmir08/desktop/digital_modulation/sky130_sharmi_flash_adc/sky130_sharmi_flash_adc.cir
+
+.include avsd_opamp.sub
+.include S_H_ADC.sub
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__diode_pw2nd_11v0.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__linear.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__pnp.model.spice"
+.lib "/usr/share/local/sky130_fd_pr/models/sky130.lib.spice" tt
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__inductors.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__r+c.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
+v1 v++ gnd  dc 2
+* u2  net-_u2-pad1_ net-_u2-pad2_ net-_u2-pad3_ net-_u2-pad4_ net-_u2-pad5_ net-_u2-pad6_ net-_u2-pad7_ net-_u2-pad8_ net-_u1-pad1_ net-_u1-pad2_ net-_u1-pad3_ net-_u1-pad4_ net-_u1-pad5_ net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ adc_bridge_8
+* u1  net-_u1-pad1_ net-_u1-pad2_ net-_u1-pad3_ net-_u1-pad4_ net-_u1-pad5_ net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ sharmi_pe
+* u4  net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ out0 out2 out1 dac_bridge_3
+* u6  out0 plot_v1
+* u3  out1 plot_v1
+* u5  out2 plot_v1
+* s c m o d e
+v4 input gnd  dc 2m
+v2 v-- gnd  dc -2
+x2 v++ v-- input sampled_output net-_u2-pad1_ gnd avsd_opamp
+x6 v++ v-- net-_sc1-pad1_ sampled_output net-_u2-pad2_ gnd avsd_opamp
+x3 v++ v-- net-_sc2-pad1_ sampled_output net-_u2-pad3_ gnd avsd_opamp
+x7 v++ v-- net-_sc3-pad1_ sampled_output net-_u2-pad4_ gnd avsd_opamp
+x4 v++ v-- net-_sc4-pad1_ sampled_output net-_u2-pad5_ gnd avsd_opamp
+x8 v++ v-- net-_sc5-pad1_ sampled_output net-_u2-pad6_ gnd avsd_opamp
+x5 v++ v-- net-_sc6-pad1_ sampled_output net-_u2-pad7_ gnd avsd_opamp
+x9 v++ v-- net-_sc7-pad1_ sampled_output net-_u2-pad8_ gnd avsd_opamp
+xsc1 net-_sc1-pad1_ input input sky130_fd_pr__res_generic_pd L=10
+xsc2 net-_sc2-pad1_ net-_sc1-pad1_ input sky130_fd_pr__res_generic_pd L=10
+xsc3 net-_sc3-pad1_ net-_sc2-pad1_ input sky130_fd_pr__res_generic_pd L=10
+xsc4 net-_sc4-pad1_ net-_sc3-pad1_ input sky130_fd_pr__res_generic_pd L=10
+xsc8 gnd net-_sc7-pad1_ input sky130_fd_pr__res_generic_pd L=10
+xsc5 net-_sc5-pad1_ net-_sc4-pad1_ input sky130_fd_pr__res_generic_pd L=10
+xsc6 net-_sc6-pad1_ net-_sc5-pad1_ input sky130_fd_pr__res_generic_pd L=10
+xsc7 net-_sc7-pad1_ net-_sc6-pad1_ input sky130_fd_pr__res_generic_pd L=10
+* u9  sampled_output plot_v1
+x1 analog_input sampling_signal sampled_output S_H_ADC
+v3  analog_input gnd sine(0 2m 5K 0 0)
+v5  sampling_signal gnd pulse(0 2m 0.1u 0.1u 0.1u 4m 8m)
+* u7  analog_input plot_v1
+* u8  sampling_signal plot_v1
+a1 [net-_u2-pad1_ net-_u2-pad2_ net-_u2-pad3_ net-_u2-pad4_ net-_u2-pad5_ net-_u2-pad6_ net-_u2-pad7_ net-_u2-pad8_ ] [net-_u1-pad1_ net-_u1-pad2_ net-_u1-pad3_ net-_u1-pad4_ net-_u1-pad5_ net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ ] u2
+a2 [net-_u1-pad1_ net-_u1-pad2_ net-_u1-pad3_ net-_u1-pad4_ net-_u1-pad5_ net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ ] [net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ ] u1
+a3 [net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ ] [out0 out2 out1 ] u4
+* Schematic Name:                             adc_bridge_8, NgSpice Name: adc_bridge
+.model u2 adc_bridge(in_low=0.3 in_high=1 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             sharmi_pe, NgSpice Name: sharmi_pe
+.model u1 sharmi_pe(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             dac_bridge_3, NgSpice Name: dac_bridge
+.model u4 dac_bridge(out_low=0.3 out_high=1 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+.tran 0.5e-03 200e-03 0e-03
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(out0)
+plot v(out1)
+plot v(out2)
+plot v(sampled_output)
+plot v(analog_input)
+plot v(sampling_signal)
+.endc
+.end

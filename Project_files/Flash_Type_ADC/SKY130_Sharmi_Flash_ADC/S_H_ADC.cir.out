@@ -1,0 +1,24 @@
+* /home/sharmir08/esim-2.3/library/subcircuitlibrary/s_h_adc/s_h_adc.cir
+
+.include avsd_opamp.sub
+x2 v++ v-- net-_u1-pad3_ capacitor net-_u1-pad3_ gnd avsd_opamp
+v1 v++ gnd  dc 0
+v2 v-- gnd  dc 0
+xsc4 net-_sc3-pad1_ net-_sc4-pad2_ capacitor gnd sky130_fd_pr__nfet_01v8_lvt 
+xsc3 net-_sc3-pad1_ net-_sc1-pad1_ capacitor v++ sky130_fd_pr__pfet_01v8_hvt 
+xsc2 net-_sc1-pad1_ sampling_frequency gnd gnd sky130_fd_pr__nfet_01v8_lvt 
+xsc1 net-_sc1-pad1_ sampling_frequency v++ v++ sky130_fd_pr__pfet_01v8_hvt 
+* u2  capacitor plot_v1
+xsc5 capacitor gnd sky130_fd_pr__cap_mim_m3_1 
+x1 v++ v-- net-_sc3-pad1_ net-_u1-pad1_ net-_sc3-pad1_ gnd avsd_opamp
+* u1  net-_u1-pad1_ net-_sc4-pad2_ net-_u1-pad3_ port
+.tran 0e-00 0e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(capacitor)
+.endc
+.end

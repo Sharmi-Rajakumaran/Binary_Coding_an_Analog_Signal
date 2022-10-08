@@ -1,0 +1,281 @@
+optran: no such command available in ngspice
+
+Compatibility modes selected: hs a
+
+Warning: m=xx on .subckt line will override multiplier m hierarchy!
+
+Warning: redefinition of .subckt sky130_fd_pr__pnp_05v5_w0p68l0p68, ignored
+Warning: redefinition of .subckt sky130_fd_pr__model__parasitic__res_po, ignored
+Warning: redefinition of .subckt sky130_fd_pr__res_xhigh_po, ignored
+Warning: redefinition of .subckt sky130_fd_pr__res_high_po, ignored
+Warning: redefinition of .subckt sky130_fd_pr__res_xhigh_po_0p35, ignored
+Warning: redefinition of .subckt sky130_fd_pr__res_xhigh_po_0p69, ignored
+Warning: redefinition of .subckt sky130_fd_pr__res_xhigh_po_1p41, ignored
+Warning: redefinition of .subckt sky130_fd_pr__res_xhigh_po_2p85, ignored
+Warning: redefinition of .subckt sky130_fd_pr__res_xhigh_po_5p73, ignored
+Warning: redefinition of .subckt sky130_fd_pr__res_xhigh_po__base, ignored
+Warning: redefinition of .subckt sky130_fd_pr__res_high_po_0p35, ignored
+Warning: redefinition of .subckt sky130_fd_pr__res_high_po_0p69, ignored
+Warning: redefinition of .subckt sky130_fd_pr__res_high_po_1p41, ignored
+Warning: redefinition of .subckt sky130_fd_pr__res_high_po_2p85, ignored
+Warning: redefinition of .subckt sky130_fd_pr__res_high_po_5p73, ignored
+Warning: redefinition of .subckt sky130_fd_pr__res_generic_po, ignored
+Warning: redefinition of .subckt sky130_fd_pr__res_generic_nd, ignored
+Warning: redefinition of .subckt sky130_fd_pr__res_generic_pd, ignored
+
+Circuit: * /home/sharmir08/desktop/digital_modulation/sky130_sharmi_flash_adc/sky130_sharmi_flash_adc.cir
+
+option SCALE: Scale is set to 1e-06 for instance and model parameters
+Warning: Model issue on line 27 :
+  .model sky130_fd_pr__model__parasitic__diode_ps2nw d level=3.0 tlevc=1.0 ...
+unrecognized parameter (vb) - ignored
+unrecognized parameter (gap1) - ignored
+unrecognized parameter (gap2) - ignored
+unrecognized parameter (xw) - ignored
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Warning: include: has no value, DC 0 assumed
+Warning: v5: no DC value, transient time 0 value used
+Warning: v3: no DC value, transient time 0 value used
+=============sharmi_pe : New Iteration===========
+Instance : 0
+
+Inside foo before eval.....
+i_in=0
+out=0
+
+Inside foo after eval.....
+i_in=0
+out=0
+=============sharmi_pe : New Iteration===========
+Instance : 0
+
+Inside foo before eval.....
+i_in=0
+out=0
+
+Inside foo after eval.....
+i_in=0
+out=0
+Warning: singular matrix:  check nodes x1.sampling_frequency and x1.sampling_frequency
+
+Note: Starting true gmin stepping
+Trying gmin =   1.0000E-03 Warning: singular matrix:  check nodes x1.sampling_frequency and x1.sampling_frequency
+
+Warning: Further gmin increment
+Trying gmin =   5.6234E-03 Warning: singular matrix:  check nodes x1.sampling_frequency and x1.sampling_frequency
+
+Warning: Further gmin increment
+Trying gmin =   8.6596E-03 Warning: singular matrix:  check nodes x1.sampling_frequency and x1.sampling_frequency
+
+Warning: Further gmin increment
+Trying gmin =   9.6466E-03 Warning: singular matrix:  check nodes x1.sampling_frequency and x1.sampling_frequency
+
+Warning: Further gmin increment
+Trying gmin =   9.9105E-03 Warning: singular matrix:  check nodes x1.sampling_frequency and x1.sampling_frequency
+
+Warning: Further gmin increment
+Trying gmin =   9.9775E-03 Warning: singular matrix:  check nodes x1.sampling_frequency and x1.sampling_frequency
+
+Warning: Further gmin increment
+Trying gmin =   9.9944E-03 Warning: singular matrix:  check nodes x1.sampling_frequency and x1.sampling_frequency
+
+Warning: Further gmin increment
+Trying gmin =   9.9986E-03 Warning: singular matrix:  check nodes x1.sampling_frequency and x1.sampling_frequency
+
+Warning: Further gmin increment
+Trying gmin =   9.9996E-03 Warning: singular matrix:  check nodes x1.sampling_frequency and x1.sampling_frequency
+
+Warning: Last gmin step failed
+Warning: singular matrix:  check nodes x1.sampling_frequency and x1.sampling_frequency
+
+Warning: True gmin stepping failed
+Note: Starting dynamic gmin stepping
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+Trying gmin =   1.0000E-05 Note: One successful gmin step
+Trying gmin =   1.0000E-06 Note: One successful gmin step
+Trying gmin =   1.0000E-07 Note: One successful gmin step
+Trying gmin =   1.0000E-08 Note: One successful gmin step
+Trying gmin =   1.0000E-09 Note: One successful gmin step
+Trying gmin =   1.0000E-10 Note: One successful gmin step
+Trying gmin =   1.0000E-11 Note: One successful gmin step
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+Warning: singular matrix:  check nodes x1.sampling_frequency and x1.sampling_frequency
+
+Warning: Dynamic gmin stepping failed
+Note: Starting source stepping
+Supplies reduced to   0.0000% Warning: singular matrix:  check nodes x1.sampling_frequency and x1.sampling_frequency
+
+
+Trying gmin =   1.0000E-02 Note: One successful gmin step
+Trying gmin =   1.0000E-03 Note: One successful gmin step
+Trying gmin =   1.0000E-04 Note: One successful gmin step
+Trying gmin =   1.0000E-05 Note: One successful gmin step
+Trying gmin =   1.0000E-06 Note: One successful gmin step
+Trying gmin =   1.0000E-07 Note: One successful gmin step
+Trying gmin =   1.0000E-08 Note: One successful gmin step
+Trying gmin =   1.0000E-09 Note: One successful gmin step
+Trying gmin =   1.0000E-10 Note: One successful gmin step
+Trying gmin =   1.0000E-11 Note: One successful gmin step
+Trying gmin =   1.0000E-12 Note: One successful gmin step
+Note: One successful source step
+Supplies reduced to   0.1000% Warning: singular matrix:  check nodes x1.sampling_frequency and x1.sampling_frequency
+
+Supplies reduced to   0.0000% Warning: singular matrix:  check nodes x1.sampling_frequency and x1.sampling_frequency
+
+Warning: source stepping failed
+
+Transient solution failed -
+
+Last Node Voltages
+------------------
+
+Node                                   Last Voltage        Previous Iter
+----                                   ------------        -------------
+sky130_fd_pr__esd_nfet_05v0_nvt.pm3                    0                    0
+                                                  0                    0
+v++                                               0          4.14493e-76
+input                                             0         -1.6444e-192
+v--                                               0          2.16429e-70
+x2.net-_m1-pad1_                       -3.30234e-86         -2.11769e-98
+x2.net-_m1-pad3_                       -8.10903e-86          1.24623e-96
+x2.out1                                 -4.5185e-86          -1.2819e-98
+sampled_output                         -1.23207e-61         -2.71255e-71
+x2.ref                                  8.59473e-85          -5.2171e-96
+net-_u2-pad1_                          -1.23208e-61         -2.71255e-71
+x6.net-_m1-pad1_                       -3.30231e-86         -2.11767e-98
+net-_sc1-pad1_                         6.61203e-183                    0
+x6.net-_m1-pad3_                       -8.10895e-86          1.24622e-96
+x6.out1                                -4.51846e-86         -1.28189e-98
+x6.ref                                  8.59473e-85          -5.2171e-96
+net-_u2-pad2_                          -1.23208e-61         -2.71255e-71
+x3.net-_m1-pad1_                       -3.30231e-86         -2.11767e-98
+net-_sc2-pad1_                         1.13349e-182                    0
+x3.net-_m1-pad3_                       -8.10895e-86          1.24622e-96
+x3.out1                                -4.51845e-86         -1.28189e-98
+x3.ref                                  8.59473e-85          -5.2171e-96
+net-_u2-pad3_                          -1.23208e-61         -2.71255e-71
+x7.net-_m1-pad1_                       -3.30231e-86         -2.11767e-98
+net-_sc3-pad1_                         1.41686e-182                    0
+x7.net-_m1-pad3_                       -8.10895e-86          1.24622e-96
+x7.out1                                -4.51845e-86         -1.28189e-98
+x7.ref                                  8.59473e-85          -5.2171e-96
+net-_u2-pad4_                          -1.23208e-61         -2.71255e-71
+x4.net-_m1-pad1_                       -3.30231e-86         -2.11767e-98
+net-_sc4-pad1_                         1.51132e-182                    0
+x4.net-_m1-pad3_                       -8.10895e-86          1.24622e-96
+x4.out1                                -4.51845e-86         -1.28189e-98
+x4.ref                                  8.59473e-85          -5.2171e-96
+net-_u2-pad5_                          -1.23208e-61         -2.71255e-71
+x8.net-_m1-pad1_                       -3.30231e-86         -2.11767e-98
+net-_sc5-pad1_                         1.41686e-182                    0
+x8.net-_m1-pad3_                       -8.10895e-86          1.24622e-96
+x8.out1                                -4.51845e-86         -1.28189e-98
+x8.ref                                  8.59473e-85          -5.2171e-96
+net-_u2-pad6_                          -1.23208e-61         -2.71255e-71
+x5.net-_m1-pad1_                       -3.30231e-86         -2.11767e-98
+net-_sc6-pad1_                         1.13349e-182                    0
+x5.net-_m1-pad3_                       -8.10895e-86          1.24622e-96
+x5.out1                                -4.51845e-86         -1.28189e-98
+x5.ref                                  8.59473e-85          -5.2171e-96
+net-_u2-pad7_                          -1.23208e-61         -2.71255e-71
+x9.net-_m1-pad1_                       -3.30231e-86         -2.11767e-98
+net-_sc7-pad1_                         6.61203e-183                    0
+x9.net-_m1-pad3_                       -8.10895e-86          1.24622e-96
+x9.out1                                -4.51846e-86         -1.28189e-98
+x9.ref                                  8.59473e-85          -5.2171e-96
+net-_u2-pad8_                          -1.23208e-61         -2.71255e-71
+x1.x2.net-_m1-pad1_                    -4.26453e-86         -1.20985e-98
+x1.x2.net-_m1-pad3_                    -7.65862e-86          1.15228e-96
+x1.x2.out1                              -4.2633e-86          -1.2095e-98
+x1.capacitor                            1.18955e-62           2.2743e-72
+x1.v++                                            0          1.37953e-76
+x1.x2.ref                               8.59473e-85          -5.2171e-96
+x1.v--                                            0          7.20329e-71
+x1.net-_sc3-pad1_                      -2.04844e-61         -4.74902e-71
+sampling_signal                                   0                    0
+x1.net-_sc1-pad1_                      -5.82803e-80         -6.44984e-91
+x1.sampling_frequency                             0                    0
+x1.xsc5.a                                         0                    0
+x1.xsc5.b1                                        0                    0
+x1.x1.net-_m1-pad1_                    -4.55633e-86         -1.29263e-98
+x1.x1.net-_m1-pad3_                    -8.17693e-86          1.25667e-96
+x1.x1.out1                                -3.33e-86         -2.13543e-98
+analog_input                                      0                    0
+x1.x1.ref                               8.59473e-85          -5.2171e-96
+out0                                            0.3                    0 *
+out2                                            0.3                    0 *
+out1                                            0.3                    0 *
+v5#branch                                         0                    0
+v3#branch                                         0                    0
+v.x1.v2#branch                          1.02503e-72                    0
+v.x1.v1#branch                         -5.17565e-73                    0
+v2#branch                               1.96751e-72                    0
+v4#branch                             -1.39552e-183                    0
+v1#branch                              -9.81845e-73                    0
+a3#branch_1_0                                     0                  0.3 *
+a3#branch_1_1                                     0                  0.3 *
+a3#branch_1_2                                     0                  0.3 *
+
+
+
+No. of Data Rows : 0
+doAnalyses: iteration limit reached
+
+run simulation(s) aborted
+Error(parse.c--checkvalid): : zero length vector.
+Error(parse.c--checkvalid): a3#branch_1_0: zero length vector.
+Error: no such vector v(out0)
+Error: no such vector v(out1)
+Error: no such vector v(out2)
+Error: no such vector v(sampled_output)
+Error: no such vector v(analog_input)
+Error: no such vector v(sampling_signal)
+binary raw file "/home/sharmir08/Desktop/Digital_modulation/SKY130_Sharmi_Flash_ADC/SKY130_Sharmi_Flash_ADC.raw"
+Reducing trtol to 1 for xspice 'A' devices
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Warning: include: has no value, DC 0 assumed
+Warning: v5: no DC value, transient time 0 value used
+Warning: v3: no DC value, transient time 0 value used
+No. of Data Columns : 337  
+=============sharmi_pe : New Iteration===========
+Instance : 1
+
+Inside foo before eval.....
+i_in=0
+out=0
+
+Inside foo after eval.....
+i_in=0
+out=0
+=============sharmi_pe : New Iteration===========
+Instance : 1
+
+Inside foo before eval.....
+i_in=0
+out=0
+
+Inside foo after eval.....
+i_in=0
+out=0
+
+No. of Data Rows : 1360
+
+Total analysis time (seconds) = 0.931204
+
+Total CPU time (seconds) = 12.173 
+
+Total DRAM available = 257855.305 MB.
+DRAM currently available = 224432.234 MB.
+Maximum ngspice program size =  393.793 MB.
+Current ngspice program size =  331.195 MB.
+
+Shared ngspice pages =    9.422 MB.
+Text (code) pages =    6.285 MB.
+Stack = 0 bytes.
+Library pages =  322.438 MB.
+

@@ -1,0 +1,21 @@
+* /home/sharmir08/eSim-2.3/library/SubcircuitLibrary/S_H_ADC/S_H_ADC.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: Sat 08 Oct 2022 10:19:36 PM IST
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+X2  V++ V-- Net-_U1-Pad3_ Capacitor Net-_U1-Pad3_ Gnd avsd_opamp		
+v1  V++ Gnd DC		
+v2  V-- Gnd DC		
+SC4  Net-_SC3-Pad1_ Net-_SC4-Pad2_ Capacitor Gnd sky130_fd_pr__nfet_01v8_lvt		
+SC3  Net-_SC3-Pad1_ Net-_SC1-Pad1_ Capacitor V++ sky130_fd_pr__pfet_01v8_hvt		
+SC2  Net-_SC1-Pad1_ Sampling_Frequency Gnd Gnd sky130_fd_pr__nfet_01v8_lvt		
+SC1  Net-_SC1-Pad1_ Sampling_Frequency V++ V++ sky130_fd_pr__pfet_01v8_hvt		
+U2  Capacitor plot_v1		
+SC5  Capacitor Gnd sky130_fd_pr__cap_mim_m3_1		
+X1  V++ V-- Net-_SC3-Pad1_ Net-_U1-Pad1_ Net-_SC3-Pad1_ Gnd avsd_opamp		
+U1  Net-_U1-Pad1_ Net-_SC4-Pad2_ Net-_U1-Pad3_ PORT		
+
+.end

@@ -1,0 +1,42 @@
+* /home/sharmir08/Desktop/Digital_modulation/SKY130_Sharmi_Flash_ADC/SKY130_Sharmi_Flash_ADC.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: Sat 08 Oct 2022 10:29:50 PM IST
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+v1  V++ gnd DC		
+U2  Net-_U2-Pad1_ Net-_U2-Pad2_ Net-_U2-Pad3_ Net-_U2-Pad4_ Net-_U2-Pad5_ Net-_U2-Pad6_ Net-_U2-Pad7_ Net-_U2-Pad8_ Net-_U1-Pad1_ Net-_U1-Pad2_ Net-_U1-Pad3_ Net-_U1-Pad4_ Net-_U1-Pad5_ Net-_U1-Pad6_ Net-_U1-Pad7_ Net-_U1-Pad8_ adc_bridge_8		
+U1  Net-_U1-Pad1_ Net-_U1-Pad2_ Net-_U1-Pad3_ Net-_U1-Pad4_ Net-_U1-Pad5_ Net-_U1-Pad6_ Net-_U1-Pad7_ Net-_U1-Pad8_ Net-_U1-Pad9_ Net-_U1-Pad10_ Net-_U1-Pad11_ sharmi_pe		
+U4  Net-_U1-Pad9_ Net-_U1-Pad10_ Net-_U1-Pad11_ out0 out2 Out1 dac_bridge_3		
+U6  out0 plot_v1		
+U3  Out1 plot_v1		
+U5  out2 plot_v1		
+scmode1  SKY130mode		
+v4  Input gnd DC		
+v2  V-- gnd DC		
+X2  V++ V-- Input Sampled_output Net-_U2-Pad1_ gnd avsd_opamp		
+X6  V++ V-- Net-_SC1-Pad1_ Sampled_output Net-_U2-Pad2_ gnd avsd_opamp		
+X3  V++ V-- Net-_SC2-Pad1_ Sampled_output Net-_U2-Pad3_ gnd avsd_opamp		
+X7  V++ V-- Net-_SC3-Pad1_ Sampled_output Net-_U2-Pad4_ gnd avsd_opamp		
+X4  V++ V-- Net-_SC4-Pad1_ Sampled_output Net-_U2-Pad5_ gnd avsd_opamp		
+X8  V++ V-- Net-_SC5-Pad1_ Sampled_output Net-_U2-Pad6_ gnd avsd_opamp		
+X5  V++ V-- Net-_SC6-Pad1_ Sampled_output Net-_U2-Pad7_ gnd avsd_opamp		
+X9  V++ V-- Net-_SC7-Pad1_ Sampled_output Net-_U2-Pad8_ gnd avsd_opamp		
+SC1  Net-_SC1-Pad1_ Input Input sky130_fd_pr__res_generic_pd		
+SC2  Net-_SC2-Pad1_ Net-_SC1-Pad1_ Input sky130_fd_pr__res_generic_pd		
+SC3  Net-_SC3-Pad1_ Net-_SC2-Pad1_ Input sky130_fd_pr__res_generic_pd		
+SC4  Net-_SC4-Pad1_ Net-_SC3-Pad1_ Input sky130_fd_pr__res_generic_pd		
+SC8  gnd Net-_SC7-Pad1_ Input sky130_fd_pr__res_generic_pd		
+SC5  Net-_SC5-Pad1_ Net-_SC4-Pad1_ Input sky130_fd_pr__res_generic_pd		
+SC6  Net-_SC6-Pad1_ Net-_SC5-Pad1_ Input sky130_fd_pr__res_generic_pd		
+SC7  Net-_SC7-Pad1_ Net-_SC6-Pad1_ Input sky130_fd_pr__res_generic_pd		
+U9  Sampled_output plot_v1		
+X1  Analog_input Sampling_signal Sampled_output S_H_ADC		
+v3  Analog_input gnd sine		
+v5  Sampling_signal gnd pulse		
+U7  Analog_input plot_v1		
+U8  Sampling_signal plot_v1		
+
+.end
